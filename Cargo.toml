@@ -1,0 +1,29 @@
+[package]
+name = "lks32mc03x_pac"
+version = "0.1.0"
+edition = "2021"
+description = "Peripheral access crate for the LKS32MC03x MCU"
+keywords = [
+    "no-std",
+    "embedded",
+]
+categories = [
+    "no-std",
+    "embedded",
+    "hardware-support",
+]
+repository = "https://github.com/823984418/lks32mc03x_pac"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+critical-section = { version = "1.2", optional = true }
+cortex-m = "0.7"
+cortex-m-rt = { version = "0.7", optional = true }
+vcell = "0.1"
+
+[features]
+rt = ["cortex-m-rt/device"]
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--generate-link-to-definition"]
